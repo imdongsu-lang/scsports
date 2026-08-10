@@ -306,6 +306,36 @@
     .price-compare b{white-space:nowrap;color:#0b4f94}
     .price-hook small{display:block;margin-top:10px;color:#7a8798;line-height:1.45}
 
+  
+    .operations{background:#f8fbff}
+    .operations-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .operations-card{
+      background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px;
+      box-shadow:0 10px 30px rgba(12,31,63,.06)
+    }
+    .operations-card .ops-label{
+      display:inline-flex;align-items:center;gap:8px;background:#eef5ff;color:var(--blue);
+      font-weight:1000;font-size:13px;padding:7px 11px;border-radius:999px;margin-bottom:12px
+    }
+    .operations-card h3{font-size:23px;margin:0 0 12px;color:var(--navy)}
+    .operations-card p,.operations-card li{color:#526179}
+    .operations-card ul{margin:0;padding-left:20px}
+    .operations-card li+li{margin-top:7px}
+    .operations-note{
+      margin-top:18px;background:#fff7e6;border:1px solid #ffe0a3;border-radius:16px;
+      padding:15px 17px;color:#7a5710;font-size:14px;font-weight:800
+    }
+    .operations-refund{grid-column:1/-1}
+    .operations-refund .refund-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .operations-steps{
+      margin-top:14px;padding:14px 16px;background:#f6f9fd;border-radius:14px;color:#526179
+    }
+    @media(max-width:760px){
+      .operations-grid{grid-template-columns:1fr}
+      .operations-refund{grid-column:auto}
+      .operations-refund .refund-grid{grid-template-columns:1fr}
+    }
+
   </style>
 </head>
 <body>
@@ -339,6 +369,7 @@
         <div class="hero-actions">
           <a class="btn btn-primary" href="tel:0617447330">☎ 전화로 신청하기</a>
           <a class="btn btn-light" href="#programs">프로그램 확인하기 ↓</a>
+          <a class="btn btn-light" href="#operations">운영안내 보기</a>
           <a class="btn btn-light" href="#consult">📝 빠른 상담신청</a>
         </div>
       </div>
@@ -604,6 +635,84 @@
   </section>
 
 
+  
+  <section class="operations" id="operations">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="tag">OPERATING GUIDE</div>
+        <h2>운영안내</h2>
+        <p>접수기간, 강습기간, 환불 기준을 확인하신 후 신청해 주세요.</p>
+      </div>
+
+      <div class="operations-grid">
+        <article class="operations-card">
+          <div class="ops-label">📅 접수기간</div>
+          <h3>기존회원 · 신규회원 접수일</h3>
+          <ul>
+            <li><strong>기존회원:</strong> 매월 1일</li>
+            <li><strong>신규회원:</strong> 매월 1일, 15일 <small>(종목별 상이)</small></li>
+          </ul>
+          <div class="operations-note">※ 강습비 입금 후 수강 가능합니다.</div>
+        </article>
+
+        <article class="operations-card">
+          <div class="ops-label">🕘 접수시간</div>
+          <h3>주중 접수 운영시간</h3>
+          <p><strong>주중 09:00 ~ 18:00</strong></p>
+        </article>
+
+        <article class="operations-card">
+          <div class="ops-label">🏃 강습기간</div>
+          <h3>매월 1일 개강</h3>
+          <ul>
+            <li>공휴일의 전 강좌는 휴강입니다.</li>
+            <li>날짜가 맞지 않을 시 별도의 보충강습이 없습니다.</li>
+            <li>월·수·금: 12회, 10회</li>
+            <li>화·목: 08회</li>
+          </ul>
+          <div class="operations-note">※ 강습시간은 종목별 상이할 수 있습니다.</div>
+        </article>
+
+        <article class="operations-card">
+          <div class="ops-label">ℹ️ 이용 전 확인</div>
+          <h3>강좌 운영 관련 안내</h3>
+          <ul>
+            <li>강좌는 운영 사정에 따라 폐강될 수 있습니다.</li>
+            <li>폐강 시 환불이 진행될 수 있습니다.</li>
+            <li>강습시간 및 세부 운영은 종목별로 다를 수 있습니다.</li>
+          </ul>
+        </article>
+
+        <article class="operations-card operations-refund">
+          <div class="ops-label">💳 환불안내</div>
+          <h3>개강 전·후 환불 기준</h3>
+
+          <div class="refund-grid">
+            <div>
+              <ul>
+                <li><strong>개강 전:</strong> 100% 환불</li>
+                <li><strong>개강 후:</strong> 남은 금액의 10% 공제 + 남은 일수 환불<br><small>(수강기간 50%를 넘지 않았을 시)</small></li>
+                <li>강좌 참여 여부와 관계없이 경과일수는 공제됩니다.</li>
+              </ul>
+            </div>
+            <div>
+              <ul>
+                <li>환불절차: 환불신청서 작성 후 계좌 또는 카드로 입금·공제 처리</li>
+                <li>본인 외 통장으로 환불 요청 시 본인 신분증 및 가족관계증명서 첨부</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="operations-steps">
+            <strong>환불 진행 순서</strong><br>
+            환불신청서 작성 → 환불 기준 확인 → 계좌 또는 카드 처리
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
   <section class="location" id="location">
     <div class="wrap">
       <div class="section-head">
@@ -641,6 +750,7 @@
       <div class="footer-brand">
         <img class="footer-logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASQAAAAlCAYAAADr0pT9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA25pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo2NzZDMzkwNDAwMUJFOTExQTFFMEVFMjA5QzM5ODc5NSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo5OTM1OUQ2NDhBQzgxMUU5QjM0NjkyODdDRjA2RkY2MiIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo5OTM1OUQ2MzhBQzgxMUU5QjM0NjkyODdDRjA2RkY2MiIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxNCAoV2luZG93cykiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpiMmVmZGEwMC0yYjMzLTM1NGUtOTNkNi1hZmE0NDk5NTEyNWUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6Njc2QzM5MDQwMDFCRTkxMUExRTBFRTIwOUMzOTg3OTUiLz4gPC9yZGY6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" alt="사단법인 순천스포츠클럽 로고">
         <div class="footer-info">
+          <a href="#operations" style="display:inline-block;margin-bottom:8px;font-weight:900;color:#fff">운영안내 바로가기 →</a><br>
           <div class="corp">사단법인 순천스포츠클럽</div>
           주소 : 전남 순천시 팔마로 333 팔마국민체육센터<br>
           대표 : 이갑주<br>
